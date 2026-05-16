@@ -328,6 +328,7 @@ section { position: relative; }
   justify-content: center;
   margin-bottom: 32px;
 }
+.hero-bullets--mobile { display: none; }
 .hero-bullets li {
   display: flex; align-items: center; gap: 12px;
   font-size: 15px;
@@ -1441,7 +1442,9 @@ section { position: relative; }
     align-items: flex-start;
     text-align: left;
   }
-  .hero-bullets {
+  .hero-bullets--desktop { display: none; }
+  .hero-bullets--mobile {
+    display: flex;
     flex-direction: column;
     gap: 10px;
     justify-content: flex-start;
