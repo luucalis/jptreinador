@@ -116,13 +116,7 @@ const { useState, useEffect, useRef } = React;
 
 /* ───────── Icons ───────── */
 const IconCheck = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="url(#cg)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <defs>
-      <linearGradient id="cg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#FF6A00"/>
-        <stop offset="100%" stopColor="#FFC300"/>
-      </linearGradient>
-    </defs>
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="url(#icon-grad)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="20 6 9 17 4 12"></polyline>
   </svg>
 );
@@ -275,6 +269,14 @@ function Hero({ headlineVariant = "default", heroImage = "uploads/hero9.webp" })
           </div>
         </div>
         <div className="hero-bottom-group">
+          <svg width="0" height="0" style={{position:'absolute'}}>
+            <defs>
+              <linearGradient id="icon-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#FF6A00"/>
+                <stop offset="100%" stopColor="#FFC300"/>
+              </linearGradient>
+            </defs>
+          </svg>
           <ul className="hero-bullets reveal in delay-2">
             <li className="bullet-mobile-only"><IconCheck/> Personal Trainer em Blumenau</li>
             <li><IconCheck/> Treino presencial na Panobianco e Selfit</li>
