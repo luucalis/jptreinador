@@ -1438,8 +1438,9 @@ section { position: relative; }
     align-items: flex-start;
     text-align: left;
   }
-  .bullet-desktop-only { display: none; }
-  .bullet-mobile-only { display: flex; order: -1; }
+  .hero-bullets .bullet-desktop-only { display: none !important; }
+  .hero-bullets .bullet-mobile-only { display: flex; order: -1; }
+  .hero-bullets { align-items: flex-start; }
   .hero-cta-row {
     justify-content: flex-start;
     margin-bottom: 10px;
