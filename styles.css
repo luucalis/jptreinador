@@ -1435,6 +1435,7 @@ section { position: relative; }
     margin-bottom: 0;
     margin-top: 14px;
   }
+  .nav-actions { display: none; }
   .hero-bottom-group {
     position: static;
     align-items: flex-start;

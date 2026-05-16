@@ -231,6 +231,14 @@ function Nav() {
         <a href="#sobre">Sobre</a>
         <a href="#depoimentos">Depoimentos</a>
       </div>
+      <div className="nav-actions">
+        <a href={IG_URL} target="_blank" rel="noopener" className="nav-ig" aria-label="Instagram">
+          <IconInstagram size={18} />
+        </a>
+        <a href={waLink()} target="_blank" rel="noopener" className="nav-cta">
+          <IconWhatsapp size={14} /> WhatsApp
+        </a>
+      </div>
     </nav>
   );
 }
