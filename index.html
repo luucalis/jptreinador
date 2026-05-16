@@ -97,8 +97,7 @@
   <!-- Performance: pré-conectar ao CDN e pré-carregar recursos críticos -->
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="preload" href="assets/Oswald.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="assets/hero.webp" as="image" media="(min-width: 721px)">
-  <link rel="preload" href="uploads/hero-celular.webp" as="image" media="(max-width: 720px)">
+  <link rel="preload" href="uploads/hero9.webp" as="image">
 
   <link rel="icon" href="uploads/logo.webp">
   <link rel="apple-touch-icon" href="uploads/logo.webp">
@@ -245,7 +244,7 @@ function Nav() {
 }
 
 /* ───────── Hero ───────── */
-function Hero({ headlineVariant = "default", heroImage = "assets/hero.webp" }) {
+function Hero({ headlineVariant = "default", heroImage = "uploads/hero9.webp" }) {
   const headlines = {
     default: (
       <>TRANSFORME<br/>SEU CORPO COM<br/><span className="accent">DISCIPLINA</span> E <span className="accent">MÉTODO</span></>
@@ -259,32 +258,37 @@ function Hero({ headlineVariant = "default", heroImage = "assets/hero.webp" }) {
   };
   return (
     <section className="hero" id="top">
-      <div className="hero-bg" style={{backgroundImage: `url(${heroImage})`}}></div>
-      <div className="hero-bg" style={{position: "absolute", inset: 0}}>
+      <div className="hero-visual">
+        <div className="hero-photo">
+          <img src={heroImage} alt="" aria-hidden="true" />
+        </div>
+      </div>
+      <div className="hero-overlay"></div>
+      <div className="hero-grain-layer">
         <div className="hero-grain"></div>
       </div>
-      <div className="hero-text-shield"></div>
       <div className="hero-content">
-        <div className="reveal in">
-          <span className="hero-eyebrow eyebrow">Personal Trainer · Blumenau</span>
+        <div className="hero-title-group">
+          <div className="reveal in">
+            <span className="hero-eyebrow eyebrow">Personal Trainer · Blumenau</span>
+          </div>
+          <h1 className="display reveal in delay-1">{headlines[headlineVariant] || headlines.default}</h1>
         </div>
-        <h1 className="display reveal in delay-1">{headlines[headlineVariant] || headlines.default}</h1>
-        <p className="hero-sub reveal in delay-2">
-          Treinamento personalizado presencial na Panobianco e Selfit, e consultoria online de onde você estiver. Método direto, sem atalhos, com acompanhamento próximo.
-        </p>
-        <ul className="hero-bullets reveal in delay-3">
-          <li><IconCheck/> Treino presencial na Panobianco e Selfit</li>
-          <li><IconCheck/> Acompanhamento contínuo e personalizado</li>
-          <li><IconCheck/> Consultoria online de qualquer lugar</li>
-        </ul>
-        <div className="hero-cta-row reveal in delay-4">
-          <a className="btn-whatsapp" href={waLink("Olá João! Vim pelo site e quero começar agora.")} target="_blank" rel="noopener">
-            <IconWhatsapp/> Quero começar agora
-          </a>
-          <a className="btn-ghost" href="#metodo">Ver método <IconArrow/></a>
-        </div>
-        <div className="microcopy reveal in delay-4">
-          Sem compromisso<span className="dot">•</span>Resposta rápida<span className="dot">•</span>Vagas limitadas
+        <div className="hero-bottom-group">
+          <ul className="hero-bullets reveal in delay-2">
+            <li><IconCheck/> Treino presencial na Panobianco e Selfit</li>
+            <li><IconCheck/> Acompanhamento contínuo e personalizado</li>
+            <li><IconCheck/> Consultoria online de qualquer lugar</li>
+          </ul>
+          <div className="hero-cta-row reveal in delay-3">
+            <a className="btn-whatsapp" href={waLink("Olá João! Vim pelo site e quero começar agora.")} target="_blank" rel="noopener">
+              <IconWhatsapp/> Quero começar agora
+            </a>
+            <a className="btn-ghost" href="#metodo">Ver método <IconArrow/></a>
+          </div>
+          <div className="microcopy reveal in delay-3">
+            Sem compromisso<span className="dot">•</span>Resposta rápida<span className="dot">•</span>Vagas limitadas
+          </div>
         </div>
       </div>
     </section>
@@ -501,7 +505,7 @@ function Gyms() {
           {/* ── Foto João — centro ── */}
           <div className="gym-photo-col reveal delay-1">
             <div className="gym-photo-wrap">
-              <img src="uploads/personal.webp" alt="João Lopes Personal Trainer" loading="lazy" decoding="async" />
+              <img src="uploads/personal1.webp" alt="João Lopes Personal Trainer" loading="lazy" decoding="async" />
               <div className="gym-photo-badge">
                 <div className="gym-photo-name">João Lopes</div>
                 <div className="gym-photo-sub">Personal Trainer · Blumenau SC</div>
