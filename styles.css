@@ -156,26 +156,11 @@ section { position: relative; }
   padding: 0;
   background: var(--bg);
 }
-/* Gradiente direita — ocupa o gap escuro além da imagem */
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0; bottom: 0; right: 0;
-  width: max(0px, calc((100vw - 1200px) / 2));
-  background: linear-gradient(270deg,
-    rgba(10,10,10,0.95) 0%,
-    rgba(10,10,10,0.5) 55%,
-    rgba(10,10,10,0) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
-
 .hero-visual {
   position: absolute;
-  right: max(0px, calc((100vw - 1200px) / 2));
+  right: 0;
   top: 0; bottom: 0;
-  width: 580px;
+  width: max(580px, calc(50vw - 20px));
   overflow: hidden;
   background: #0A0A0A;
   isolation: isolate;
