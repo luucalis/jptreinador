@@ -231,14 +231,6 @@ function Nav() {
         <a href="#sobre">Sobre</a>
         <a href="#depoimentos">Depoimentos</a>
       </div>
-      <div className="nav-actions">
-        <a href={IG_URL} target="_blank" rel="noopener" className="nav-ig" aria-label="Instagram">
-          <IconInstagram size={18} />
-        </a>
-        <a href={waLink()} target="_blank" rel="noopener" className="nav-cta">
-          <IconWhatsapp size={14} /> WhatsApp
-        </a>
-      </div>
     </nav>
   );
 }
@@ -269,10 +261,10 @@ function Hero({ headlineVariant = "default", heroImage = "uploads/hero9.webp" })
       </div>
       <div className="hero-content">
         <div className="hero-title-group">
-          <div className="reveal in">
+          <h1 className="display reveal in delay-1">{headlines[headlineVariant] || headlines.default}</h1>
+          <div className="hero-eyebrow-wrap reveal in">
             <span className="hero-eyebrow eyebrow">Personal Trainer · Blumenau</span>
           </div>
-          <h1 className="display reveal in delay-1">{headlines[headlineVariant] || headlines.default}</h1>
         </div>
         <div className="hero-bottom-group">
           <ul className="hero-bullets reveal in delay-2">

@@ -280,6 +280,12 @@ section { position: relative; }
 }
 .hero-title-group {
   max-width: 640px;
+  display: flex;
+  flex-direction: column;
+}
+.hero-eyebrow-wrap {
+  order: -1;
+  margin-bottom: 22px;
 }
 .hero-bottom-group {
   position: absolute;
@@ -1423,6 +1429,11 @@ section { position: relative; }
   .hero-title-group {
     max-width: 100%;
     margin-bottom: 24px;
+  }
+  .hero-eyebrow-wrap {
+    order: 1;
+    margin-bottom: 0;
+    margin-top: 14px;
   }
   .hero-bottom-group {
     position: static;
